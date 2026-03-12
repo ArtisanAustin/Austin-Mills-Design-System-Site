@@ -1,0 +1,44 @@
+/* ===== Typography ===== */
+
+/* Main Header (h1) */
+h1 {
+  font-family: "Inter", sans-serif;
+  font-weight: 600;   /* SemiBold */
+  font-size: 72px;
+  text-align: center;
+}
+
+/* Body Text (p) */
+p {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.5;
+  text-align: center;
+}
+
+/* List Items */
+li {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+
+/* ===== Button Styling ===== */
+
+button {
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  background-color: #ffd54f; /* soft yellow */
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #ffca28; /* slightly darker yellow */
+}
+
