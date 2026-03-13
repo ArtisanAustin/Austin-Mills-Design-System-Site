@@ -1,20 +1,71 @@
 /* ===== Typography ===== */
 
-/* Main Header (h1) */
+/* ===== Types of Text ===== */
 h1 {
   font-family: "Inter", sans-serif;
   font-weight: 600;   /* SemiBold */
+  font-style: normal;
   font-size: 72px;
-  text-align: center;
+  text-align: left;
+  color: var(--gray);
+  padding: 95px 0 0 100px;
+/* top | right | bottom | left */
+
 }
+
+.title {
+  font-family: "Inter", sans-serif;
+  font-weight: 600;   /* SemiBold */
+  font-size: 72px;
+  font-style: normal;
+  text-align: left;
+  color: var(--gray);
+  padding: 59px 0 0 65px;
+}
+
+h2 {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;   /* SemiBold */
+  font-style: normal;
+  font-size: 48px;
+  text-align: left;
+  color: var(--gray);
+  padding: 59px 0 0 65px;
+}
+
+h3 {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;   /* SemiBold */
+  font-style: normal;
+  font-size: 36px;
+  text-align: left;
+  color: var(--gray);
+  padding: 59px 0 0 65px;
+}
+
+h4 {
+  font-family: "Inter", sans-serif;
+  font-weight: 200;   /* SemiBold */
+  font-style: italic;
+  font-size: 24px;
+  text-align: left;
+  color: var(--gray);
+  padding: 59px 0 0 65px;
+}
+
+
+
+
 
 /* Body Text (p) */
 p {
   font-family: "Inter", sans-serif;
   font-weight: 400;
-  font-size: 18px;
-  line-height: 1.5;
-  text-align: center;
+  font-size: 20px;
+  line-height: normal;
+  text-align: left;
+  color: var(--gray);
+  padding: 59px 0 0 65px;
 }
 
 /* List Items */
@@ -23,22 +74,125 @@ li {
   font-weight: 400;
   font-size: 16px;
   margin-bottom: 8px;
+  color: var(--gray);
+  padding: 8px 80px; /* top/bottom = 40px, left/right = 24px */
 }
+
+ul {
+  list-style-position: inside;
+}
+
+
+
+
+
 
 /* ===== Button Styling ===== */
 
 button {
   font-family: "Inter", sans-serif;
   font-weight: 600;
-  font-size: 18px;
-  padding: 12px 24px;
+  font-size: 20px;
+  font-display: flex;
+  width:120px;
+  box-sizing: content-box;
+  flex-direction: column;
+  justify-content: center;
+  padding: 10px 26px;
+  display: inline-flex;
+  margin-top: 32px;     /* space above the button */
+  margin-bottom: 16px;  /* space below the button */
+  margin-left: 100px;     /* space to the left of the button */
+  margin-right: 16px;  /* space to the right of the button */
   border: none;
   border-radius: 8px;
-  background-color: #ffd54f; /* soft yellow */
+  color: var(--white);
+  background-color: var(--saturated-green); 
   cursor: pointer;
+  border-radius: 6px;
+  gap: 10px;
 }
 
 button:hover {
-  background-color: #ffca28; /* slightly darker yellow */
+  background-color: var(--light-green); 
+  color: var(--gray)
 }
 
+.button-row {
+  display: flex;
+  flex-direction: row;
+  gap: 0px; /* space between buttons is not cooperating to be like how it was on Figma */
+  align-items: left; /* optional */
+  padding-left: 0px; /* I can't get this to be left aligned with the texts. I hit 0 and tried to do negatives but it won't cooperate with me */
+}
+.primary-btn { background: var(--saturated-green); }
+.secondary-btn { background: var(--light-green); }
+.tertiary-btn { background: var(--white); 
+  border: 1px solid var(--gray);
+  color: var(--gray);
+}
+
+/* ===== Color Palette ===== */
+
+:root {
+  --white: #FAFAFA;
+  --gray: #444444;
+  --saturated-teal: #44958C;
+  --light-teal: #96C9C3;
+  --saturated-green: #55B021;
+  --light-green: #A1D484;
+  --saturated-yellow: #FBB700;
+  --light-yellow: #fbebc0;
+  --saturated-pink: #E57E96;
+  --light-pink: #F4B7C5;
+}
+
+.color-palette-top {
+  margin-left: 200px;
+  margin-top: 150px;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 24px;
+  width: 1px; /* adjust to match your Figma width */
+}
+.color-palette-bottom {
+  margin-left: 25px;
+  margin-top: 50px;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 24px;
+  width: 1500px; /* adjust to match your Figma width */
+}
+
+.swatch {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 14px;
+  width: 250px;
+  color: var(--gray);
+}
+.circle-white {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  margin: 0 auto 8px auto;
+  border: 2px solid var(--gray); /* optional, matches Figma subtle outline */
+}
+.circle-top {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  margin: 0 auto 8px auto;
+  border: 0px solid var(--gray); /* optional, matches Figma subtle outline */
+
+}
+.circle-bottom {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  margin: 0 auto 8px auto;
+  border: 0px solid var(--gray); /* optional, matches Figma subtle outline */
+}
