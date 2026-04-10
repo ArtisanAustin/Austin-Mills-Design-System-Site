@@ -1,97 +1,63 @@
 <!DOCTYPE html>
-<html>
-<head>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Abhaya+Libre:wght@400;500;600;700&display=swap" rel="stylesheet">
+  </head>
 
-  <!-- Next line says how to read apostrophies and stuff -->
-  <meta charset="UTF-8">
-  <title>Austin Mills – Design System Site</title>
+  <body>
+    <header class="site-header">
+      <div class="logo-area">
+        <img src="logo.png" alt="Site logo" class="logo">
+        <span class="brand-name">Lunch Money's Design System</span>
+      </div>
 
-  <!-- Next line references the CSS file -->
-  <link rel="stylesheet" href="styles.css">
+      <nav class="main-nav">
+        <ul>
+          <li><a href="Components/components.html">Components</a></li>
+          <li><a href="Brand Identity/brand-identity.html">Brand Identity</a></li>
+          <li><a href="Implementation/implementation.html">Implementation</a></li>
+          <li><a href="Accessibility/accessibility.html">Accessibility</a></li>
+        </ul>
+      </nav>
 
-  <!-- This loads the Inter font from Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
-</head>
+      <a href="index.html" class="login-btn">Home</a>
+    </header>
 
-<body>
+    <div class="home-page-card-grid">
+      <a href="Brand Identity/brand-identity.html" class="card-link brand-identity-card">
+        <h3 class="info-card-title">Brand Identity</h3>
+        <p class="info-card-description">Explore the principles that shape our brand’s voice, visuals, and personality. This section outlines how we communicate clearly and consistently across every touchpoint.</p>
+      </a>
 
-  <h1>My Design System</h1>
+      <a href="Implementation/implementation.html" class="card-link green-cards">
+        <h3 class="info-card-title">Implementation</h3>
+        <p class="info-card-description">Get practical guidance on applying the design system in real projects. Find layout rules, spacing standards, page templates, and do’s and don’ts for building cohesive experiences.</p>
+      </a>
 
-  <p>This is my practice page for HTML & CSS.</p>
+      <a href="Components/components.html" class="card-link teal-card">
+        <h3 class="info-card-title">Components</h3>
+        <p class="info-card-description">Browse our library of reusable UI components, complete with usage guidelines and code examples to help you build consistent, accessible interfaces.</p>
+      </a>
 
-  <ul>
-    <li>First item</li>
-    <li>Second item</li>
-    <li>Third item</li>
-  </ul>
+      <a href="Components/code-directory.html" class="card-link green-cards">
+        <h3 class="info-card-title">Code Directory</h3>
+        <p class="info-card-description">Access the source code behind our components and patterns. This directory provides clean, semantic HTML and CSS to help you implement designs with accuracy.</p>
+      </a>
 
-  <button>Click Me</button>
+      <a href="Accessibility/accessibility.html" class="card-link pink-card">
+        <h3 class="info-card-title">Accessibility</h3>
+        <p class="info-card-description">Learn how we design for inclusivity. This section covers contrast rules, keyboard behavior, and best practices to ensure every user can fully engage with our products.</p>
+      </a>
 
-  <h1 class="title"> Heading 1 </h1>
-  <h2>Heading 2</h2>
-  <h3>Heading 3</h3>
-  <h4>Heading 4</h4>
-  <p>Paragraph, this is a paragraph that spans multiple lines, so it will have to be quite long to get it to go into the second line.</p>
-  <div class="button-row">
-    <button class="primary-btn">Button</button>
-    <button class="secondary-btn">Button</button>
-    <button class="tertiary-btn">Button</button>
-  </div>
+      <a href="Brand Identity/brand-identity-tokens.html" class="card-link pink-card-last">
+        <h3 class="info-card-title">Tokens</h3>
+        <p class="info-card-description">View the full set of design tokens that power our system: colors, typography, spacing, and more — along with naming rules for creating new tokens responsibly.</p>
+      </a>
+    </div>
 
+  </body>
 
-  <div class="color-palette-top">
-  <div class="swatch">
-    <div class="circle-white" style="background:var(--color-background-200)"></div>
-    <p>#FAFAFA</p>
-  </div>
-
-  <div class="swatch">
-    <div class="circle-top" style="background:var(--color-primary-900)"></div>
-    <p>#44958C</p>
-  </div>
-
-  <div class="swatch">
-    <div class="circle-top" style="background:var(--color-secondary-900)"></div>
-    <p>#55B021</p>
-  </div>
-
-  <div class="swatch">
-    <div class="circle-top" style="background:var(--color-tertiary-900)"></div>
-    <p>#FBB700</p>
-  </div>
-
-  <div class="swatch">
-    <div class="circle-top" style="background:var(--color-accent-900)"></div>
-    <p>#E57E96</p>
-  </div>
-  </div>
-<div class="color-palette-bottom">
-  <div class="swatch">
-    <div class="circle-bottom" style="background:var(--color-text-900)"></div>
-    <p>#444444</p>
-  </div>
-
-  <div class="swatch">
-    <div class="circle-bottom" style="background:var(--color-primary-500)"></div>
-    <p>#96C9C3</p>
-  </div>
-
-  <div class="swatch">
-    <div class="circle-bottom" style="background:var(--color-secondary-500)"></div>
-    <p>#A1D484</p>
-  </div>
-
-  <div class="swatch">
-    <div class="circle-bottom" style="background:var(--color-tertiary-500)"></div>
-    <p>#FBEBc0</p>
-  </div>
-
-  <div class="swatch">
-    <div class="circle-bottom" style="background:var(--color-accent-500)"></div>
-    <p>#F4B7C5</p>
-  </div>
-  </div>
-
-</body>
 
 </html>
