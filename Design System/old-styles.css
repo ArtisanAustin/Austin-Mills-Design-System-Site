@@ -1,0 +1,245 @@
+/* ===== Typography ===== */
+
+
+/* fonts */
+:root {
+  --font-family-base: Inter, sans-serif;
+  --font-size-h1: 48px;
+  --font-size-h2: 36px;
+  --font-size-h3: 28px;
+  --font-size-h4: 22px;
+  --font-size-body: 16px;
+
+  --font-weight-h1: 700;
+  --font-weight-h2: 700;
+  --font-weight-h3: 600;
+  --font-weight-h4: 600;
+  --font-weight-body: 400;
+
+  --font-style-h1: normal;
+  --font-style-h2: normal;
+  --font-style-h3: italic;
+  --font-style-h4: italic;
+  --font-style-body: normal;
+
+  --line-height-h1: 1.2;
+  --line-height-h2: 1.3;
+  --line-height-h3: 1.3;
+  --line-height-h4: 1.4;
+  --line-height-body: 1.5;
+}
+
+/* ===== Types of Text ===== */
+
+
+h1 {
+  font-family: var(--font-family-base);
+  font-weight: var(--font-weight-h1);
+  font-style: var(--font-style-h1);
+  font-size: var(--font-size-h1);
+  line-height: var(--line-height-h1);
+  text-align: left;
+  color: var(--color-text-900);
+  padding: var(--spacing-10);
+}
+
+h2 {
+  font-family: var(--font-family-base);
+  font-weight: var(--font-weight-h2);
+  font-style: var(--font-style-h2);
+  font-size: var(--font-size-h2);
+  line-height: var(--line-height-h2);
+  text-align: left;
+  color: var(--color-text-900);
+  padding: var(--spacing-10);
+}
+
+h3 {
+  font-family: var(--font-family-base);
+  font-weight: var(--font-weight-h3);
+  font-style: var(--font-style-h3);
+  font-size: var(--font-size-h3);
+  line-height: var(--line-height-h3);
+  text-align: left;
+  color: var(--color-text-900);
+  padding: var(--spacing-10);
+}
+
+h4 {
+  font-family: var(--font-family-base);
+  font-weight: var(--font-weight-h4);
+  font-style: var(--font-style-h4);
+  font-size: var(--font-size-h4);
+  line-height: var(--line-height-h4);
+  text-align: left;
+  color: var(--color-text-900);
+  padding: var(--spacing-10);
+}
+
+
+
+/* Body Text (p) */
+p {
+  font-family: var(--font-family-base);
+  font-weight: var(--font-weight-body);
+  font-style: var(--font-style-body);
+  font-size: var(--font-size-body);
+  line-height: var(--line-height-body);
+  text-align: left;
+  color: var(--color-text-900);
+  padding: var(--spacing-10) var(--spacing-12); /* vertical horizontal */
+}
+
+/* List Items */
+li {
+  font-family: var(--font-family-base);
+  font-weight: var(--font-weight-body);
+  font-style: var(--font-style-body);
+  font-size: var(--font-size-body);
+  line-height: var(--line-height-body);
+  text-align: left;
+  color: var(--color-text-900);
+}
+
+ul {
+  list-style-position: inside;
+}
+
+
+
+
+
+
+/* ===== Button Styling ===== */
+
+button {
+  font-family: var(--font-family-base);
+  font-weight: var(--font-weight-body);
+  font-size: var(--font-size-body);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: auto; /* allow content-driven width */
+  box-sizing: border-box;
+  padding: var(--spacing-6) var(--spacing-12); /* vertical horizontal of the button itself */
+  white-space: nowrap; /* prevent text wrapping */
+  margin-top: var(--spacing-8);     /* space above the button */
+  margin-bottom: var(--spacing-8);  /* space below the button */
+  margin-left: var(--spacing-10);     /* space to the left of the button */
+  margin-right: var(--spacing-8);  /* space to the right of the button */
+  border: none;
+  border-radius: var(--spacing-4);
+  color: var(--color-background-200);
+  background-color: var(--color-secondary-900);
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: var(--light-green); 
+  color: var(--color-text-900);
+}
+
+.button-row {
+  display: flex;
+  flex-direction: row;
+  gap: 0px; /* space between buttons is not cooperating to be like how it was on Figma */
+  align-items: flex-start; /* optional */
+  padding-left: 0px; /* I can't get this to be left aligned with the texts. I hit 0 and tried to do negatives but it won't cooperate with me */
+}
+
+.primary-btn {
+   background: var(--color-secondary-900); 
+   width: var(--spacing-12);
+  }
+
+.secondary-btn {
+   background: var(--color-secondary-500); 
+   width: var(--spacing-12);
+  }
+
+.tertiary-btn { 
+  background: var(--color-background-200); 
+  width: var(--spacing-12);
+  border: 1px solid var(--color-text-900);
+  color: var(--color-text-900);
+}
+
+/* ===== Color Palette ===== */
+
+:root {
+  --color-primary-900: #44958C;
+  --color-primary-500: #96C9C3;
+  --color-secondary-900: #55B021;
+  --color-secondary-500: #A1D484;
+  --color-tertiary-900: #FBB700;
+  --color-tertiary-500: #FBEBC0;
+  --color-background-200: #FAFAFA;
+  --color-text-900: #444444;
+  --color-accent-900: #E57E96;
+  --color-accent-500: #F4B7C5;
+}
+
+
+
+.color-palette-top {
+  margin: 150px auto 0 auto; /* top right bottom left */
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 24px;
+  width: 1500px; /* fixed grid width so spacing matches bottom row */
+  transform: translateX(calc(100% / 5 / 2)); /* offset by half a column. I don't understand this, the AI does, but it works */
+}
+.color-palette-bottom {
+  margin: 50px auto 0 auto; /* top right bottom left */
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 24px;
+  width: 1500px; /* match top row width */
+}
+
+.swatch {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 14px;
+  width: 250px;
+  color: var(--color-text-900);
+}
+.circle-white {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  margin: 0 auto 8px auto;
+  border: 2px solid var(--color-text-900); /* optional, matches Figma subtle outline */
+}
+.circle-top {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  margin: 0 auto 8px auto;
+  border: 0px solid var(--color-text-900); /* optional, matches Figma subtle outline */
+
+}
+.circle-bottom {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  margin: 0 auto 8px auto;
+  border: 0px solid var(--color-text-900); /* optional, matches Figma subtle outline */
+}
+
+
+/* spacing */
+
+:root {
+  --spacing-2: 4px;
+  --spacing-4: 8px;
+  --spacing-6: 16px;
+  --spacing-8: 24px;
+  --spacing-10: 32px;
+  --spacing-12: 48px;
+  --spacing-16: 64px;
+}
