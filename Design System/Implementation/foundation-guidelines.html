@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Abhaya+Libre:wght@400;500;600;700&display=swap" rel="stylesheet">
+  </head>
+
+  <body>
+    <header class="site-header">
+      <div class="logo-area">
+        <img src="../logo.png" alt="Site logo" class="logo">
+        <span class="brand-name-desktop">Lunch Money's Design System</span>
+        <span class="brand-name-mobile">Design System</span>
+      </div>
+
+      <nav class="main-nav">
+        <ul>
+          <li><a href="../Components/components.html">Components</a></li>
+          <li><a href="../Brand Identity/brand-identity.html">Brand Identity</a></li>
+          <li><a href="implementation.html">Implementation</a></li>
+        </ul>
+      </nav>
+
+      <a href="../index.html" class="login-btn">Home</a>
+    </header>
+
+    <h1 class="page-title">Foundation Guidelines</h1>
+    <h3 class="page-subtitle">Our color palette includes a core grayscale range along with a set of bright accent colors. While the grayscale and primary accent colors are used most frequently, 
+      each color family also includes approved tints and shades. Beneath each block, the corresponding token name and hex value are provided for reference. 
+    </h3>
+    <h3 class="page-subtitle">Refer to the accessibility guidelines at the bottom of this page for detailed contrast requirements.</h3>
+
+    <div class="color-grid">
+
+  <!-- Row 1: Light tints -->
+  <div class="color-block">
+    <div class="color-swatch" style="background-color: var(--color-gray-100);">
+    </div>
+    <p class="color-token">--color-gray-100</p>
+    <p class="color-hex">#FAFAFA</p>
+  </div>
+  <div class="color-block">
+    <div class="color-swatch" style="background-color: var(--color-primary-500);">
+    </div>
+    <p class="color-token">--color-primary-500</p>
+    <p class="color-hex">#FBEBC0</p>
+  </div>
+  <div class="color-block">
+    <div class="color-swatch" style="background-color: var(--color-secondary-500);">
+    </div>
+    <p class="color-token">--color-secondary-500</p>
+    <p class="color-hex">#96C9C3</p>
+  </div>
+  <div class="color-block">
+    <div class="color-swatch" style="background-color: var(--color-tertiary-500);">
+    </div>
+    <p class="color-token">--color-tertiary-500</p>
+    <p class="color-hex">#A1D484</p>
+  </div>
+  <div class="color-block">
+    <div class="color-swatch" style="background-color: var(--color-accent-500);">
+    </div>
+    <p class="color-token">--color-accent-500</p>
+    <p class="color-hex">#F4B7C5</p>
+  </div>
+
+  <!-- Row 2: Colors -->
+  <div class="color-block">
+    <div class="color-swatch" style="background-color: var(--color-gray-300);">
+    </div>
+    <p class="color-token">--color-gray-300</p>
+    <p class="color-hex">#D9D9D9</p>
+  </div>
+  <div class="color-block">
+    <div class="color-swatch" style="background-color: var(--color-primary-700);">
+    </div>
+    <p class="color-token">--color-primary-700</p>
+    <p class="color-hex">#FBB700</p>
+  </div>
+  <div class="color-block">
+    <div class="color-swatch" style="background-color: var(--color-secondary-700);">
+    </div>
+    <p class="color-token">--color-secondary-700</p>
+    <p class="color-hex">#4CA49A</p>
+  </div>
+  <div class="color-block">
+    <div class="color-swatch" style="background-color: var(--color-tertiary-700);">
+    </div>
+    <p class="color-token">--color-tertiary-700</p>
+    <p class="color-hex">#55B021</p>
+  </div>
+  <div class="color-block">
+    <div class="color-swatch" style="background-color: var(--color-accent-700);">
+    </div>
+    <p class="color-token">--color-accent-700</p>
+    <p class="color-hex">#E57E96</p>
+  </div>
+
+  <!-- Row 3: Shades -->
+  <div class="color-block">
+    <div class="color-swatch" style="background-color: var(--color-gray-500);">
+    </div>
+    <p class="color-token">--color-gray-500</p>
+    <p class="color-hex">#666666</p>
+  </div>
+  <div class="color-block">
+    <div class="color-swatch" style="background-color: var(--color-primary-900);">
+    </div>
+    <p class="color-token">--color-primary-900</p>
+    <p class="color-hex">#966C03</p>
+  </div>
+  <div class="color-block">
+    <div class="color-swatch" style="background-color: var(--color-secondary-900);">
+    </div>
+    <p class="color-token">--color-secondary-900</p>
+    <p class="color-hex">#3F7D74</p>
+  </div>
+  <div class="color-block">
+    <div class="color-swatch" style="background-color: var(--color-tertiary-900);">
+    </div>
+    <p class="color-token">--color-tertiary-900</p>
+    <p class="color-hex">#4A802D</p>
+  </div>
+  <div class="color-block">
+    <div class="color-swatch" style="background-color: var(--color-accent-900);">
+    </div>
+    <p class="color-token">--color-accent-900</p>
+    <p class="color-hex">#9B1C3A</p>
+  </div>
+
+   <!-- Row 4: Gray -->
+  <div class="color-block">
+    <div class="color-swatch" style="background-color: var(--color-gray-700);">
+    </div>
+    <p class="color-token">--color-gray-700</p>
+    <p class="color-hex">#444444</p>
+  </div>
+
+  <div class="color-block">
+    <div class="color-swatch" style="background-color: var(--color-gray-900);">
+    </div>
+    <p class="color-token">--color-gray-900</p>
+    <p class="color-hex">#2e2e2e</p>
+  </div>
+</div>
+<h3 class="page-subtitle"> Use --color-gray-900 text on the first two rows of the palette. For the remaining rows, use --color-gray-300 text. 
+  Only backgrounds using --color-gray-900 may pair with any of the -700 text‑color tokens (excluding gray). See the example image below for approved combinations.
+This ensures that we stay above the minimum contrast ratio requirements.</h3>
+<h3 class="page-subtitle">For hover states, use one shade lighter for all color families and two shades lighter for grayscale values. </h3>
+
+
+  <div class="color-image">
+  <img src="figma-color-accessibility-example.png">
+</div>
