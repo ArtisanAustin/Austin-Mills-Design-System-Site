@@ -175,7 +175,15 @@ ul {
 }
 
 
-
+.token-list {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--spacing-xxs);
+  margin-top: var(--spacing-lg);
+  text-align: left;
+  letter-spacing: 0.75px;
+}
 
 
 
@@ -616,6 +624,7 @@ a {
   gap: 40px;
   position: relative;
   padding: 20px 100px; /* add some padding to prevent content from touching the edges */
+  --divider-position: 50%; /* default position of the divider */
 }
 
 /* The vertical divider */
@@ -625,6 +634,7 @@ a {
   top: 0;
   bottom: 0;
   left: 50%;
+  transform: translateX(-50%);
   width: 2px;
   background-color: var(--color-gray-500); /* light gray line */
 }
@@ -639,6 +649,9 @@ a {
   display: flex;
   justify-content: center;
   border-radius: 6px;
+  flex: 1 1 0;
+  min-width: none;
+ 
 }
 
 /* Right box */
@@ -649,18 +662,27 @@ a {
   padding: 20px 50px;
   align-items: center;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   border-radius: 6px;
+  flex: 1 1 0;
+  min-width: none;
 }
 
 /* ==================General Buttons ========================*/
 .button-grid {
   display: grid;
-  grid-template-columns: 200px 200px 200px 200px;
-  grid-template-rows: 50px 50px 50px 50px 50px;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(5, auto);
   gap: 25px;
   padding: 20px 110px;
+  min-width: 0; /* allows grid to shrink */
 }
+
+/* Responsive button grid */
+
+
+
 
 .column-headers {
   font-family: var(--font-family-base);
@@ -849,6 +871,34 @@ a {
   text-align: center;
 }
 
+/* ================== Tab Examples ========================*/
+
+.tab-link {
+  font-family: var(--font-family-base);
+  font-style: var(--font-style-h2);
+  font-weight: var(--font-weight-h1);
+  font-size: var(--font-size-h4);
+  color: var(--color-primary-700);
+  background-color: transparent;  
+  padding: 10px 24px;
+  border-radius: 6px;
+  text-decoration: none;
+  text-align: center;
+}
+
+.tab-link-hover {
+  font-family: var(--font-family-base);
+  font-style: var(--font-style-h2);
+  font-weight: var(--font-weight-h1);
+  font-size: var(--font-size-h4);
+  color: var(--color-primary-700);
+  background-color: transparent;  
+  padding: 10px 24px;
+  border-radius: 6px;
+  text-decoration: none;
+  text-align: center;
+  text-decoration: underline;}
+
 /* ================== Other Components ========================*/
 
 
@@ -963,6 +1013,7 @@ a {
   border-radius: 8px;
   padding: 20px 50px;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
 }
@@ -1337,6 +1388,13 @@ a {
   .home-page-card-grid > a.card-link:nth-child(6) { order: 6; }
 }
 
+ .button-grid {
+    padding: 20px 60px;
+    gap: 20px;
+  }
+  .column-headers, .row-label {
+    font-size: clamp(14px, 2.5vw, var(--font-size-h3));
+  }
 
 /* Half web, anything 800px to 1280px wide */
 
@@ -1521,6 +1579,18 @@ display: block;
     padding: 50px 25px 25px 25px;
     width: 90%;
 }
+
+.button-grid {
+    padding: 20px 30px;
+    gap: 15px;
+  }
+  .column-headers, .row-label {
+    font-size: clamp(12px, 2vw, var(--font-size-h4));
+  }
+  .btn {
+    padding: 8px 12px;
+    font-size: clamp(10px, 1.5vw, var(--font-size-h4));
+  }
 }
 
 
