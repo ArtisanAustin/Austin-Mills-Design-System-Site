@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Abhaya+Libre:wght@400;500;600;700&display=swap" rel="stylesheet">
+  </head>
+
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const slider = document.querySelector('.slider');
+      if (!slider) return;
+
+      function updateSliderFill() {
+        const value = slider.value;
+        slider.style.background = `linear-gradient(to right, var(--slider-active) ${value}%, var(--slider-inactive) ${value}%)`;
+      }
+
+      updateSliderFill();
+      slider.addEventListener('input', updateSliderFill);
+    });
+  </script>
+
+
+
+  <body>
+    <header class="site-header">
+      <div class="logo-area">
+        <img src="../logo.png" alt="Site logo" class="logo">
+        <span class="brand-name-desktop">Lunch Money's Design System</span>
+        <span class="brand-name-mobile">Design System</span>
+      </div>
+
+      <nav class="main-nav">
+        <ul>
+          <li><a href="components.html">Components</a></li>
+          <li><a href="../Brand Identity/brand-identity.html">Brand Identity</a></li>
+          <li><a href="../Implementation/implementation.html">Implementation</a></li>
+        </ul>
+      </nav>
+
+      <a href="../index.html" class="login-btn">Home</a>
+    </header>
+    
+    <h1 class="page-title">Other</h1>
+<div class="two-column-grid-75-25">
+     <div class="left-box-75 slider-panel">
+       <div class="slider-wrapper">
+         <input type="range" class="slider" min="0" max="100" value="50">
+       </div>
+    </div>
+     <div class="right-box-25">
+        <h2> Slider </h2>
+     </div>
+     <div class="left-box-75">
+        <header class="site-header">
+      <div class="logo-area">
+        <img src="../logo.png" alt="Site logo" class="logo">
+        <span class="brand-name-desktop">Lunch Money's Design System</span>
+        <span class="brand-name-mobile">Design System</span>
+      </div>
+
+      <nav class="main-nav">
+        <ul>
+         <li><a href="../Components/components.html">Components</a></li>
+          <li><a href="../Brand Identity/brand-identity.html">Brand Identity</a></li>
+          <li><a href="../Implementation/implementation.html">Implementation</a></li>
+          <li><a href="../Accessibility/accessibility.html">Accessibility</a></li>
+        </ul>
+      </nav>
+
+      <a href="../index.html" class="login-btn">Home</a>
+    </header>
+     </div>
+     <div class="right-box-25">
+        <h2>Header</h2>
+     </div>
+     <div class="left-box-75"></div>
+     <div class="right-box-25">
+         <h2>Next</h2>
+     </div>
+   </div>
