@@ -8,10 +8,21 @@
 
   <body>
     <header class="site-header">
-      <div class="logo-area">
-        <img src="../logo.png" alt="Site logo" class="logo">
-        <span class="brand-name-desktop">Lunch Money's Design System</span>
-        <span class="brand-name-mobile">Design System</span>
+      <a href="../index.html" class="logo-link">
+        <div class="logo-area">
+          <img src="../logo.png" alt="Site logo" class="logo">
+          <span class="brand-name-desktop">Lunch Money's Design System</span>
+          <span class="brand-name-mobile">Design System</span>
+        </div>
+      </a>
+
+      <div class="mobile-menu-control">
+        <input type="checkbox" id="mobile-menu-toggle" class="mobile-menu-checkbox">
+        <label for="mobile-menu-toggle" class="hamburger-menu" aria-label="Hamburger menu">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </label>
       </div>
 
       <nav class="main-nav">
@@ -21,11 +32,112 @@
           <li><a href="../Implementation/implementation.html">Implementation</a></li>
         </ul>
       </nav>
-
-      <a href="../index.html" class="login-btn">Home</a>
     </header>
     
     <h1 class="page-title">Code Directory</h1>
-<div class="page-description">
-      <p>This page is currently under construction. Check back soon!</p>
-    </div>
+  <div class="two-column-grid">
+
+       <div class="left-box">
+        <div class="green-cards">
+         <h3 class="info-card-title">Color Card</h3>
+         <p class="info-card-description">Hover over me! I have a pop of color to grab attention and set myself apart from other cards. I personally don't link to anything, but you can program me to open links upon clicking.</p>   
+          </div>
+     </div>
+     <div class="right-box">
+        <h2> Color Card </h2>
+        <div class="token-list">
+        <p>.green-cards {<br>
+
+    display: flex;<br>
+
+    width: 100%;<br>
+
+    min-height: 220px;<br>
+
+    height: auto;<br>
+
+    padding: 19px 16px;<br>
+
+    flex-direction: column;<br>
+
+    align-items: center;<br>
+
+    gap: 12px;<br>
+
+    border-radius: 1px;<br>
+
+    border: 4px solid var(--color-tertiary-700);<br>
+
+    background:var(--color-gray-700);<br>
+
+    grid-column: span 1; /* spans 1 column */<br>
+
+    grid-row: span 1;<br>
+
+    border-radius: 6px;<br>
+        }<br>
+<br>
+
+
+.green-cards:hover {<br>
+
+    border: 4px solid var(--color-tertiary-500);<br>
+
+    background-color: var(--color-gray-500);<br>
+
+    color: var(--color-tertiary-500);<br>
+
+}
+        </p>
+        </div>
+     </div>
+     <div class="left-box">
+        <div class="gray-card">
+            <h3 class="info-card-title">Gray Card</h3>
+            <p class="info-card-description">Hover over me! I have a more neutral color palette, so I can fit in with a variety of different designs. I personally don't link to anything, but you can program me to open links upon clicking.</p>   
+        </div>
+     </div>
+     <div class="right-box">
+        <h2> Gray Card </h2>
+        <div class="info-card-description">
+        <p>.gray-card {<br>
+
+    display: flex;<br>
+
+    width: 100%;<br>
+
+    padding: 19px 16px;<br>
+
+    flex-direction: column;<br>
+
+    align-items: center;<br>
+
+    gap: 12px;<br>
+
+    border-radius: 1px;<br>
+
+    border: 4px solid var(--color-gray-500);<br>
+
+    background:var(--color-gray-700);<br>
+
+    grid-column: span 1; /* spans 1 column */<br>
+
+    grid-row: span 2;<br>
+
+}<br>
+<br>
+
+
+.gray-card:hover {<br>
+
+    border: 4px solid var(--color-gray-300);<br>
+
+    background-color: var(--color-gray-500);<br>
+
+    color: var(--color-gray-500);<br>
+
+}
+        </p>
+        </div>
+     </div>
+

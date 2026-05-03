@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Abhaya+Libre:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+
+  <body>
+    <header class="site-header">
+      <a href="index.html" class="logo-link">
+        <div class="logo-area">
+          <img src="logo.png" alt="Site logo" class="logo">
+          <span class="brand-name-desktop">Lunch Money's Design System</span>
+          <span class="brand-name-mobile">Design System</span>
+        </div>
+      </a>
+
+      <div class="mobile-menu-control">
+        <input type="checkbox" id="mobile-menu-toggle" class="mobile-menu-checkbox">
+        <label for="mobile-menu-toggle" class="hamburger-menu" aria-label="Hamburger menu">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </label>
+      </div>
+
+            <nav class="main-nav">
+        <ul>
+          <li><a href="Components/components.html">Components</a></li>
+          <li><a href="Brand Identity/brand-identity.html">Brand Identity</a></li>
+          <li><a href="Implementation/implementation.html">Implementation</a></li>
+        </ul>
+      </nav>
+    </header>
+
+<div class="to-do">
+
+  <div class="to-do-header">
+    <h2>Week 7 To Do List</h2>
+    <input type="text" id="to-do-input" placeholder="Title...">
+    <span onclick="newElement()" class="to-do-addBtn">Add</span>
+  </div>
+
+  <ul class="to-do-list">
+    <li>Fix X's not appearing properly on website added tasks</li>
+    <li>Make the color grid more adjustable</li>
+    <li>Make the Component Guidelines text better formatted</li>
+    <li>Finish the code directory page</li>
+    <li>Finish the Page Examples page</li>
+    <li>Make sure all pages scale properly on different screen sizes</li>
+    <li>Learn how to fix scaling on the Buttons page</li>
+
+  </ul>
+
+</div>
+
+  <script>
+    // Create a "close" button and append it to each to-do list item. 
+    var myNodelist = document.querySelectorAll('.to-do-list li');
+    var i;
+    for (i = 0; i < myNodelist.length; i++) {
+      var span = document.createElement("SPAN");
+      var txt = document.createTextNode("\u00D7");
+      span.className = "to-do-close";
+      span.appendChild(txt);
+      myNodelist[i].appendChild(span);
+    }
+
+    // Click on a close button to hide the current list item
+    var close = document.getElementsByClassName("to-do-close");
+    var i;
+    for (i = 0; i < close.length; i++) {
+      close[i].onclick = function(ev) {
+        ev.stopPropagation();
+        var div = this.parentElement;
+        div.style.display = "none";
+      }
+    }
+
+    // Add a "checked" symbol when clicking on a list item
+    var list = document.querySelector('.to-do-list');
+    list.addEventListener('click', function(ev) {
+      if (ev.target.tagName === 'LI') {
+        ev.target.classList.toggle('checked');
+      }
+    }, false);
+
+    // Create a new list item when clicking on the "Add" button
+    function newElement() {
+      var li = document.createElement("li");
+      var inputValue = document.getElementById("to-do-input").value;
+      var t = document.createTextNode(inputValue);
+      li.appendChild(t);
+      if (inputValue === '') {
+        alert("You must write something!");
+      } else {
+        document.querySelector('.to-do-list').appendChild(li);
+      }
+      document.getElementById("to-do-input").value = "";
+
+      var span = document.createElement("SPAN");
+      var txt = document.createTextNode("\u00D7");
+      span.className = "to-do-close";
+      span.onclick = function(ev) {
+        ev.stopPropagation();
+        var div = this.parentElement;
+        div.style.display = "none";
+      };
+      li.appendChild(span);
+    }
+
+    // Add event listener for Enter key on input
+    document.getElementById("to-do-input").addEventListener("keypress", function(event) {
+      if (event.key === "Enter") {
+        newElement();
+      }
+    });
+
+    
+  </script>
+

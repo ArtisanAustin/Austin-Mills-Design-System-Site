@@ -6,23 +6,32 @@
     <link href="https://fonts.googleapis.com/css2?family=Abhaya+Libre:wght@400;500;600;700&display=swap" rel="stylesheet">
   </head>
 
-  <body>
+  <body class="component-guidelines-page">
     <header class="site-header">
-      <div class="logo-area">
-        <img src="../logo.png" alt="Site logo" class="logo">
-        <span class="brand-name-desktop">Lunch Money's Design System</span>
-        <span class="brand-name-mobile">Design System</span>
+      <a href="../index.html" class="logo-link">
+        <div class="logo-area">
+          <img src="../logo.png" alt="Site logo" class="logo">
+          <span class="brand-name-desktop">Lunch Money's Design System</span>
+          <span class="brand-name-mobile">Design System</span>
+        </div>
+      </a>
+
+      <div class="mobile-menu-control">
+        <input type="checkbox" id="mobile-menu-toggle" class="mobile-menu-checkbox">
+        <label for="mobile-menu-toggle" class="hamburger-menu" aria-label="Hamburger menu">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </label>
       </div>
 
-      <nav class="main-nav">
+            <nav class="main-nav">
         <ul>
           <li><a href="../Components/components.html">Components</a></li>
           <li><a href="../Brand Identity/brand-identity.html">Brand Identity</a></li>
           <li><a href="implementation.html">Implementation</a></li>
         </ul>
       </nav>
-
-      <a href="../index.html" class="login-btn">Home</a>
     </header>
 
     <h1 class="page-title">Component Guidelines</h1>
@@ -56,18 +65,18 @@
         </div>
     </div>
 
-    <h3 class="page-subtitle">Primary Button - Use for the main actions</h3>
+    <h3 class="page-subtitle"><strong>Primary Button - Use for the main actions</strong></h3>
     <p class="page-description">The Primary button represents the most important action on a page or within a component. Use only one Primary button per view to maintain a clear visual hierarchy, excluding buttons on the page header.</p>
-    <h3 class="page-subtitle">Secondary Button - Use for supporting actions</h3>
+    <h3 class="page-subtitle"><strong>Secondary Button - Use for supporting actions</strong></h3>
     <p class="page-description">The Secondary button is used for actions that are important but not the main call to action. It provides a clear alternative without competing visually with the Primary button.</p>
-    <h3 class="page-subtitle">Tertiary Button - Use for launching actions</h3>
+    <h3 class="page-subtitle"><strong>Tertiary Button - Use for launching actions</strong></h3>
     <p class="page-description">The Tertiary button is to be used sparingly, and primarily for actions that connect or launch other features. Can also be used with a red variation in limited scenarios for canceling or deleting actions.</p>
 
-    <h3 class="page-subtitle">Default</h3>
+    <h3 class="page-subtitle"><strong>Default</strong></h3>
     <p class="page-description">The standard appearance of the button. Use this state for all active, ready‑to‑use actions.</p>
-    <h3 class="page-subtitle">Hover</h3>
+    <h3 class="page-subtitle"><strong>Hover</strong></h3>
     <p class="page-description">Utilizes a dark background and colored border to indicate interactivity.</p>
-    <h3 class="page-subtitle">Pressed</h3>
+    <h3 class="page-subtitle"><strong>Pressed</strong></h3>
     <p class="page-description">Represents that the button has been pressed down.</p>
-    <h3 class="page-subtitle">Disabled</h3>
+    <h3 class="page-subtitle"><strong>Disabled</strong></strong></h3>
     <p class="page-description">Represents that the button is not available for interaction.</p>
